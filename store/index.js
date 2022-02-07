@@ -26,7 +26,7 @@ export const state = () => ({
     },
     {
       id: 3,
-      title: 'Product 3',
+      title: 'Product asdas',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
       price: 110,
       ratings: 2,
@@ -161,6 +161,9 @@ export const getters = {
 }
 
 export const mutations = {
+  productsAdd: (state, products) => {
+    state.products = products
+  },
   addToCart: (state, id) => {
     state.products.forEach(el => {
       if (id === el.id) {
