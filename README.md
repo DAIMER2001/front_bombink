@@ -17,15 +17,26 @@ Responsive ecommerce template built with Vue.js and Nuxt.js
 git clone git@github.com:DAIMER2001/products_mercadolibre.git
 
 # install dependencies
-yarn install
+
 npm i
+
 # serve with hot reload at localhost:3000
-yarn dev
-npm dev
+npm run dev
+
 # generate static pages via nuxt.js for static hosting
-yarn build
 npm build
 ```
+
+## o correr con dockerfile
+# run dockerfile
+
+docker build -t front .
+
+docker run -p 3000:3000 front
+
+-> docker ls
+
+
 
 ---
 
