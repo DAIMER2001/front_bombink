@@ -108,9 +108,22 @@ export default {
     }
   },
   mounted() {
+    this.getProducts();
     this.getCategorys();
   },
   methods: {
+    getProducts() {
+      this.$axios
+        .get("/api/" + 'products')
+        .then(response => {
+          console.log(response);
+        })
+        .catch(error => {
+          console.error("Hubo un error en el método list", error);
+          throw error.response.data;
+          // this.error_validator(error)
+        });
+    },
     getCategorys() {
       this.$axios
         .$get(`https://api.mercadolibre.com/sites/MCO/categories`)
@@ -163,10 +176,10 @@ export default {
 
 <style lang="scss" scoped>
 .title {
-  background: url("../../static/vuemmerce-logo.png") no-repeat;
-  background-position: 50% 50%;
-  background-size: 165px;
-  width: 175px;
+  background: url("../../static/logobombink.jpg") no-repeat;
+  background-position: 50% 90%;
+  background-size: 40px;
+  width: 80px;
   height: 35px;
 }
 .shopping-cart {

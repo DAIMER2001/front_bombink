@@ -14,17 +14,17 @@ Responsive ecommerce template built with Vue.js and Nuxt.js
 
 ```
 # clone repository
-git clone https://github.com/ivanlori/Vuemmerce.git
+git clone git@github.com:DAIMER2001/products_mercadolibre.git
 
 # install dependencies
 yarn install
-
+npm i
 # serve with hot reload at localhost:3000
 yarn dev
-
+npm dev
 # generate static pages via nuxt.js for static hosting
 yarn build
-
+npm build
 ```
 
 ---

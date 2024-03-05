@@ -1,3 +1,5 @@
+import axios from "axios";
+
 export const state = () => ({
   products: [
     {
@@ -133,6 +135,20 @@ export const getters = {
     return state.products.filter(el => {
       return el.isFavourite;
     });
+  },
+  getProductsActives: state => {
+    return this.$axios
+    .$get(`http://127.0.0.1:8000/api/products/`)
+    .then(response => {
+      console.log(response);
+      this.categories = response
+    })
+    .catch(error => {
+      console.error("Hubo un error en el método list", error);
+      throw error.response.data;
+      // this.error_validator(error)
+    });
+
   },
   getProductById: state => id => {
     return state.products.find(product => product.id == id);

@@ -163,10 +163,17 @@ module.exports = {
    ** Axios module configuration
    */
   axios: {
-    // See https://github.com/nuxt-community/axios-module#options
+    proxy:true,
   },
 
+  proxy: {
+    '/api/': {
+      target: 'http://127.0.0.1:8000/',
+      pathRewrite: { '^/api/': '/api/' }
+    }
+  },
   generate: {
     dir: "docs"
-  }
+  },
+  // serverMiddleware: ['~/middleware/cors.js']
 };

@@ -38,6 +38,7 @@ export default {
 
   methods: {
     getProductByTitle () {
+      console.log('holaaaaaaaaaaaaaaaaaaa')
       let listOfProducts = this.$store.state.products,
           titleSearched = this.$store.state.userInfo.productTitleSearched;
       
