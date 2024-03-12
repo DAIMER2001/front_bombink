@@ -87,7 +87,6 @@ export default {
       quantityArray: [],
       arrayobject_person: [
         {
-          nombre: 'Product',
           edad: 2,
         },
         {
