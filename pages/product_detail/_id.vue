@@ -84,7 +84,19 @@ export default {
       removeFromFavouriteLabel: 'Remove from favourite',
       product: {},
       selected: 1,
-      quantityArray: []
+      quantityArray: [],
+      arrayobject_person: [
+        {
+          nombre: 'Product',
+          edad: 2,
+        },
+        {
+
+        }
+      ],
+
+
+
     };
   },
 
